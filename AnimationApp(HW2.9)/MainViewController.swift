@@ -27,10 +27,12 @@ class MainViewController: UIViewController {
         springView.animation = animation.animation
         springView.curve = animation.animationCurve
         springView.duration = animation.duration
+        
         animationTypeLabel.text = "Type: \(animation.animation)"
         curveTypeLabel.text = "Curve: \(animation.animationCurve)"
         durationValueLabel.text = "Duration: \(round(value: animation.duration))"
         forceValueLabel.text = "Force: \(round(value: animation.force))"
+        
         springView.animate()
         
         if numberOfAnimation + 1 > animations.count - 1 {
